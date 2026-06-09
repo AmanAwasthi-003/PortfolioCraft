@@ -1,0 +1,7 @@
+# Block backend sensitive files
+backend/node_modules/
+backend/.env
+
+# Block frontend heavy files
+frontend/node_modules/
+frontend/dist/
