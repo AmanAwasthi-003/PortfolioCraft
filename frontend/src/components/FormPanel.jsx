@@ -209,7 +209,7 @@ function FormPanel({ state, setState, activeTab, setActiveTab }) {
             {/* Restored Clean Grid: Big generate button removed completely */}
             <div className="nav-btns" style={{ marginTop: '20px' }}>
               <button className="btn-prev" style={{ width: '100%' }} onClick={() => setActiveTab('certificates')}>
-                ← Projects
+                ← Certificates
               </button>
             </div>
           </section>

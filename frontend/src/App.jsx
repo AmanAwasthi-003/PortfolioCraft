@@ -22,7 +22,7 @@ function App() {
   const handleGenerate = async () => {
     try {
       // Backend MongoDB Save API Call
-      const res = await fetch('http://localhost:5000/api/portfolio/save', {
+      const res = await fetch('https://portfoliocraft-backend.onrender.com/api/portfolio/save', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ portfolioData: JSON.stringify(state) })
