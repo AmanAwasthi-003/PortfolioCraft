@@ -21,7 +21,6 @@ function Vibrant({ state }) {
           )}
         </div>
 
-        {/* Added Contact Info Row */}
         {contact && Object.values(contact).some(v => v) && (
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px', justifyContent: 'center', marginTop: '10px', fontSize: '13px', opacity: 0.95 }}>
             {contact.email && <span>✉ {contact.email}</span>}

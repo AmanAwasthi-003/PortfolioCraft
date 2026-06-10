@@ -8,7 +8,6 @@ function Minimal({ state }) {
   return (
     <div style={{ padding: '50px', color: '#1a1a1a', fontFamily: currentFont, background: '#fafaf9', minHeight: '1000px', borderRadius: '8px' }}>
       
-      {/* ================= HEADER SECTION ================= */}
       <header style={{ display: 'flex', alignItems: 'center', gap: '20px', borderBottom: '1px solid #e8e8e8', paddingBottom: '24px' }}>
         {personal.photo ? (
           <img src={personal.photo} alt="Profile" style={{ width: '80px', height: '80px', borderRadius: '50%', objectFit: 'cover', border: `2px solid ${accent}` }} />
@@ -24,14 +23,11 @@ function Minimal({ state }) {
         </div>
       </header>
       
-      {/* ================= MAIN TWO-COLUMN LAYOUT ================= */}
       <main style={{ marginTop: '24px', display: 'grid', gridTemplateColumns: '1fr 240px', gap: '30px' }}>
         
-        {/* LEFT COLUMN: MAIN CONTENTS */}
         <div>
           {personal.about && <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#444', marginBottom: '24px' }}>{personal.about}</p>}
           
-          {/* Certificates Section */}
           {certificates && certificates.length > 0 && certificates.some(c => c.title) && (
             <section style={{ marginBottom: '30px' }}>
               <h2 style={{ fontSize: '18px', fontWeight: '700', color: accent, marginBottom: '14px', borderBottom: '1px solid #eee', paddingBottom: '6px' }}>Certificates</h2>
@@ -49,7 +45,6 @@ function Minimal({ state }) {
             </section>
           )}
 
-          {/* Projects Section */}
           {projects && projects.length > 0 && projects.some(p => p.name) && (
             <section style={{ marginBottom: '30px' }}>
               <h2 style={{ fontSize: '18px', fontWeight: '700', color: accent, marginBottom: '14px', borderBottom: '1px solid #eee', paddingBottom: '6px' }}>Projects</h2>
@@ -69,7 +64,6 @@ function Minimal({ state }) {
             </section>
           )}
 
-          {/* Experience Section */}
           {experience && experience.length > 0 && experience.some(e => e.title || e.company) && (
             <section style={{ marginBottom: '30px' }}>
               <h2 style={{ fontSize: '18px', fontWeight: '700', color: accent, marginBottom: '14px', borderBottom: '1px solid #eee', paddingBottom: '6px' }}>Experience</h2>
@@ -85,7 +79,6 @@ function Minimal({ state }) {
             </section>
           )}
 
-          {/* Education Section */}
           {education && education.length > 0 && education.some(e => e.degree || e.inst) && (
             <section style={{ marginBottom: '30px' }}>
               <h2 style={{ fontSize: '18px', fontWeight: '700', color: accent, marginBottom: '14px', borderBottom: '1px solid #eee', paddingBottom: '6px' }}>Education</h2>
@@ -102,10 +95,8 @@ function Minimal({ state }) {
           )}
         </div>
 
-        {/* RIGHT COLUMN: SIDEBAR (SKILLS & CONTACT) */}
         <aside style={{ borderLeft: '1px solid #eee', paddingLeft: '20px' }}>
           
-          {/* Skills Area */}
           {personal.skills && personal.skills.length > 0 && personal.skills[0] !== "" && (
             <div style={{ marginBottom: '30px' }}>
               <h3 style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '1px', color: '#999', marginBottom: '12px', fontWeight: '700' }}>Skills</h3>
@@ -117,7 +108,6 @@ function Minimal({ state }) {
             </div>
           )}
 
-          {/* Contact & Social Section (Dynamic Logic Applied) */}
           <div style={{ marginTop: '20px' }}>
             <h3 style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '1px', color: '#999', marginBottom: '12px', fontWeight: '700' }}>Connect</h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '13px', color: '#444' }}>

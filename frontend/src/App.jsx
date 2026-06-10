@@ -21,7 +21,6 @@ function App() {
 
   const handleGenerate = async () => {
     try {
-      // Backend MongoDB Save API Call
       const res = await fetch('https://portfoliocraft-backend.onrender.com/api/portfolio/save', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -30,11 +29,12 @@ function App() {
       const data = await res.json();
       if (data.success) {
         setIsModalOpen(true);
-      } else {
-        // Fallback agar backend band ho tab bhi offline modal khulega download options ke liye
+      } 
+      else {
         setIsModalOpen(true);
       }
-    } catch (err) {
+    } 
+    catch (err) {
       console.error("Error saving portfolio:", err);
       setIsModalOpen(true);
     }
@@ -42,12 +42,12 @@ function App() {
 
   return (
     <div className="app-container">
-      {/* ================= HEADER VIEW WITH FUNCTIONAL GENERATE BUTTON ================= */}
       <header className="app-header">
         <div className="logo">
           <span className="logo-mark">◈</span>
           <span className="logo-text">PortfolioCraft</span>
         </div>
+        
         <div className="header-actions">
           <span className="step-indicator">
             Step {['personal','education','experience','projects','certificates','contact'].indexOf(activeTab) + 1} of 6

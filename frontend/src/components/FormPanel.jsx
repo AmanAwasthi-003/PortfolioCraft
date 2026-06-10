@@ -34,7 +34,6 @@ function FormPanel({ state, setState, activeTab, setActiveTab }) {
       </nav>
 
       <div className="form-content" style={{ padding: '20px' }}>
-        {/* ================= PERSONAL INFO ================= */}
         {activeTab === 'personal' && (
           <section className="tab-section active">
             <h2 className="section-title">Personal Info</h2>
@@ -60,13 +59,10 @@ function FormPanel({ state, setState, activeTab, setActiveTab }) {
               <div className="field"><label>Full Name *</label><input type="text" placeholder="enter name" value={state.personal.name || ''} onChange={(e) => updatePersonal('name', e.target.value)}/></div>
               <div className="field"><label>Job Title / Role *</label><input type="text" placeholder="enter role" value={state.personal.title || ''} onChange={(e) => updatePersonal('title', e.target.value)}/></div>
               <div className="field"><label>About Me</label><textarea placeholder="write about yourself" rows="4" value={state.personal.about || ''} onChange={(e) => updatePersonal('about', e.target.value)}></textarea></div>
-              
-              {/* Changed back to Profile Photo URL Input */}
               <div className="field">
                 <label>Profile Photo URL</label>
                 <input type="url" placeholder="enter profile photo url" value={state.personal.photo || ''} onChange={(e) => updatePersonal('photo', e.target.value)}/>
               </div>
-
               <div className="field-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
                 <div className="field"><label>City</label><input type="text" placeholder="enter city" value={state.personal.city || ''} onChange={(e) => updatePersonal('city', e.target.value)} style={{ width: '100%' }}/></div>
                 <div className="field"><label>Country</label><input type="text" placeholder="enter country" value={state.personal.country || ''} onChange={(e) => updatePersonal('country', e.target.value)} style={{ width: '100%' }}/></div>
@@ -77,7 +73,6 @@ function FormPanel({ state, setState, activeTab, setActiveTab }) {
           </section>
         )}
 
-        {/* ================= EDUCATION ================= */}
         {activeTab === 'education' && (
           <section className="tab-section active">
             <h2 className="section-title">Education</h2>
@@ -104,7 +99,6 @@ function FormPanel({ state, setState, activeTab, setActiveTab }) {
           </section>
         )}
 
-        {/* ================= EXPERIENCE ================= */}
         {activeTab === 'experience' && (
           <section className="tab-section active">
             <h2 className="section-title">Work Experience</h2>
@@ -131,7 +125,6 @@ function FormPanel({ state, setState, activeTab, setActiveTab }) {
           </section>
         )}
 
-        {/* ================= PROJECTS ================= */}
         {activeTab === 'projects' && (
           <section className="tab-section active">
             <h2 className="section-title">Projects</h2>
@@ -158,7 +151,6 @@ function FormPanel({ state, setState, activeTab, setActiveTab }) {
           </section>
         )}
 
-        {/* ================= CERTIFICATES ================= */}
         {activeTab === 'certificates' && (
           <section className="tab-section active">
             <h2 className="section-title">Certificates</h2>
@@ -168,8 +160,6 @@ function FormPanel({ state, setState, activeTab, setActiveTab }) {
                   <div className="card-header"><span className="card-number">Certificate #{idx + 1}</span><button className="btn-remove" onClick={() => setState({ ...state, certificates: state.certificates.filter((_, i) => i !== idx) })}>✕ Remove</button></div>
                   <div className="field-group">
                     <div className="field"><label>Certificate Title</label><input type="text" placeholder="e.g. MERN Stack Developer" value={cert.title || ''} style={{ width: '100%' }} onChange={(e) => { const arr = [...state.certificates]; arr[idx].title = e.target.value; setState({...state, certificates: arr}); }}/></div>
-                    
-                    {/* Changed back to Certificate Document URL Input instead of File field */}
                     <div className="field" style={{ marginTop: '10px' }}>
                       <label>Certificate Document URL (Image/PDF)</label>
                       <input 
@@ -183,7 +173,6 @@ function FormPanel({ state, setState, activeTab, setActiveTab }) {
                         }}
                       />
                     </div>
-
                     <div className="field" style={{ marginTop: '10px' }}><label>Short Description</label><textarea rows="2" placeholder="Describe your achievement..." value={cert.description || ''} style={{ width: '100%' }} onChange={(e) => { const arr = [...state.certificates]; arr[idx].description = e.target.value; setState({...state, certificates: arr}); }}/></div>
                   </div>
                 </div>
@@ -194,7 +183,6 @@ function FormPanel({ state, setState, activeTab, setActiveTab }) {
           </section>
         )}
 
-        {/* ================= CONTACT SECTION ================= */}
         {activeTab === 'contact' && (
           <section className="tab-section active">
             <h2 className="section-title">Contact & Social</h2>
@@ -205,8 +193,6 @@ function FormPanel({ state, setState, activeTab, setActiveTab }) {
               <div className="field"><label>LinkedIn URL</label><input type="url" placeholder="your linkedin url" value={state.contact.linkedin || ''} onChange={(e) => setState({...state, contact: {...state.contact, linkedin: e.target.value}})} /></div>
               <div className="field"><label>Twitter / X URL</label><input type="url" placeholder="your twitter/x url" value={state.contact.twitter || ''} onChange={(e) => setState({...state, contact: {...state.contact, twitter: e.target.value}})} /></div>
             </div>
-
-            {/* Restored Clean Grid: Big generate button removed completely */}
             <div className="nav-btns" style={{ marginTop: '20px' }}>
               <button className="btn-prev" style={{ width: '100%' }} onClick={() => setActiveTab('certificates')}>
                 ← Certificates

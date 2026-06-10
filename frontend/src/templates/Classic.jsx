@@ -31,7 +31,6 @@ function Classic({ state }) {
             </section>
           )}
 
-          {/* Certificates Section */}
           {certificates && certificates.length > 0 && certificates.some(c => c.title) && (
             <section style={{ marginBottom: '24px' }}>
               <h2 style={{ fontSize: '14px', color: classicAccent, textTransform: 'uppercase', letterSpacing: '1px', margin: 0 }}>Certificates</h2>
@@ -48,7 +47,6 @@ function Classic({ state }) {
             </section>
           )}
 
-          {/* Projects Section */}
           {projects && projects.length > 0 && projects.some(p => p.name) && (
             <section style={{ marginBottom: '24px' }}>
               <h2 style={{ fontSize: '14px', color: classicAccent, textTransform: 'uppercase', letterSpacing: '1px', margin: 0 }}>Projects</h2>
@@ -69,7 +67,6 @@ function Classic({ state }) {
             </section>
           )}
 
-          {/* Experience Section */}
           {experience && experience.length > 0 && experience.some(e => e.title || e.company) && (
             <section style={{ marginBottom: '24px' }}>
               <h2 style={{ fontSize: '14px', color: classicAccent, textTransform: 'uppercase', letterSpacing: '1px', margin: 0 }}>Experience</h2>
@@ -87,7 +84,6 @@ function Classic({ state }) {
             </section>
           )}
 
-          {/* Education Section */}
           {education && education.length > 0 && education.some(e => e.degree || e.inst) && (
             <section style={{ marginBottom: '24px' }}>
               <h2 style={{ fontSize: '14px', color: classicAccent, textTransform: 'uppercase', letterSpacing: '1px', margin: 0 }}>Education</h2>
@@ -118,7 +114,6 @@ function Classic({ state }) {
             </section>
           )}
 
-          {/* Added Contact Info Block */}
           {contact && Object.values(contact).some(v => v) && (
             <section style={{ marginTop: '10px' }}>
               <h3 style={{ fontFamily: 'serif', fontSize: '13px', color: classicAccent, textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '10px' }}>Connect</h3>

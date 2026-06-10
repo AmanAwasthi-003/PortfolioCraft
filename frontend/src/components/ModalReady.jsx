@@ -9,7 +9,6 @@ function ModalReady({ state, onClose }) {
     return document.getElementById('portfolio-capture-target');
   };
 
-  // 1. Generate local shareable dynamic Blob link
   const generateBlobUrl = () => {
     const elementContents = getCapturedElement().innerHTML;
     const masterHtml = `
@@ -40,7 +39,6 @@ function ModalReady({ state, onClose }) {
     setTimeout(() => target.textContent = 'Copy Link', 2000);
   };
 
-  // 2. Download Core Execution Handlers
   const downloadHTML = () => {
     const url = generateBlobUrl();
     const a = document.createElement('a');
@@ -81,25 +79,20 @@ function ModalReady({ state, onClose }) {
         <div className="modal-icon">🎉</div>
         <h3>Your Portfolio is Ready!</h3>
         <p>Click the link below to open or download your generated portfolio.</p>
-        
-        {/* Main Header Action Button */}
         <button className="portfolio-link" onClick={openInNewTab} style={{ width: '100%', marginBottom: '14px' }}>
           Open My Portfolio →
         </button>
 
-        {/* Video Styled Action Bar Row */}
         <div className="modal-actions" style={{ display: 'flex', gap: '10px', justifyContent: 'center', marginBottom: '14px' }}>
           <button className="btn-copy" onClick={copyLink} style={{ flex: '1' }}>Copy Link</button>
           <button className="btn-close-modal" onClick={onClose} style={{ flex: '1' }}>Close</button>
         </div>
 
-        {/* Custom Premium Dropdown Selector Feature */}
         <div style={{ position: 'relative', width: '100%', textAlign: 'left' }}>
           <button 
             className="btn-copy" 
             onClick={() => setDropdownOpen(!dropdownOpen)} 
-            style={{ width: '100%', background: 'var(--bg3)', borderColor: 'var(--border2)', color: 'var(--text)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 14px' }}
-          >
+            style={{ width: '100%', background: 'var(--bg3)', borderColor: 'var(--border2)', color: 'var(--text)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 14px' }}>
             <span>◈ Download Portfolio Options</span>
             <span>{dropdownOpen ? '▲' : '▼'}</span>
           </button>

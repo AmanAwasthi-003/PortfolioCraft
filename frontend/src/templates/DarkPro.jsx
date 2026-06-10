@@ -31,7 +31,6 @@ function DarkPro({ state }) {
             </section>
           )}
 
-          {/* Certificates Section */}
           {certificates && certificates.length > 0 && certificates.some(c => c.title) && (
             <section style={{ marginBottom: '30px' }}>
               <h2 style={{ fontSize: '12px', textTransform: 'uppercase', letterSpacing: '2px', color: accentColor, marginBottom: '15px' }}>Certificates</h2>
@@ -47,7 +46,6 @@ function DarkPro({ state }) {
             </section>
           )}
 
-          {/* Projects Section */}
           {projects && projects.length > 0 && projects.some(p => p.name) && (
             <section style={{ marginBottom: '30px' }}>
               <h2 style={{ fontSize: '12px', textTransform: 'uppercase', letterSpacing: '2px', color: accentColor, marginBottom: '15px' }}>Projects</h2>
@@ -67,7 +65,6 @@ function DarkPro({ state }) {
             </section>
           )}
 
-          {/* Experience Section */}
           {experience && experience.length > 0 && experience.some(e => e.title || e.company) && (
             <section style={{ marginBottom: '30px' }}>
               <h2 style={{ fontSize: '12px', textTransform: 'uppercase', letterSpacing: '2px', color: accentColor, marginBottom: '15px' }}>Experience</h2>
@@ -84,7 +81,6 @@ function DarkPro({ state }) {
             </section>
           )}
 
-          {/* Education Section */}
           {education && education.length > 0 && education.some(e => e.degree || e.inst) && (
             <section style={{ marginBottom: '30px' }}>
               <h2 style={{ fontSize: '12px', textTransform: 'uppercase', letterSpacing: '2px', color: accentColor, marginBottom: '15px' }}>Education</h2>
@@ -113,7 +109,6 @@ function DarkPro({ state }) {
             </section>
           )}
 
-          {/* Added Contact Info Block */}
           {contact && Object.values(contact).some(v => v) && (
             <section style={{ marginTop: '25px' }}>
               <h3 style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '2px', color: accentColor, marginBottom: '12px' }}>Connect</h3>

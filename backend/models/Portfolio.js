@@ -11,7 +11,7 @@ const PortfolioSchema = new mongoose.Schema({
     name: String,
     title: String,
     about: String,
-    photo: String, // Dynamic URL string input type
+    photo: String, 
     city: String,
     country: String,
     skills: [String]
@@ -39,7 +39,7 @@ const PortfolioSchema = new mongoose.Schema({
   }],
   certificates: [{ 
     title: String, 
-    previewUrl: String, // Dynamic URL link text string input type
+    previewUrl: String, 
     description: String 
   }],
   contact: { 

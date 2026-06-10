@@ -5,7 +5,6 @@ import Vibrant from '../templates/Vibrant';
 import Classic from '../templates/Classic';
 
 function PreviewPanel({ state, zoom, setZoom }) {
-  // Dynamic template rendering logic
   const renderTemplate = () => {
     switch (state.template) {
       case 'dark':
